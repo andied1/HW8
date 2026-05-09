@@ -7,18 +7,30 @@ cd campus-taskboard
 mvn spring-boot:run
 
 Endpoint Documentation
+
 GET        /api/tasks                       Returns all tasks
 GET{id}    /api/tasks/{"id"}                Returns task by ID
 POST       /api/tasks                       Create a task
 PUT{id}    /api/tasks/{"id"}                Update a task by ID
 DELETE{id} /api/tasks/{"id"}                Delete a task by ID
 
-
+Task/(Other)
 GET        /api/tasks/completed             Returns completed tasks
 GET        /api/tasks/incomplete            Returns incomplete tasks
 GET        /api/tasks/priority/{priority}   Returns priority section with specificed priority
 GET        /api/tasks/search                Returns tasks searched by specificed keywords in the title
 GET        /api/tasks/paginated             Returns paginated, sorted tasks with default pagination data or custom
 
+Get(HW8)
+GET        /actuator/health                 Returns application's status
+GET        /swagger-ui/index.html           Returns Swagger API documentation
+GET        /v3/api-docs                     Returns OPENAPI JSON docs
 
-Video Link: 
+Security:
+Spring Security - To protect API Endpoints
+CORS - To allow frontend access from elsewhere and another origin
+Swagger Access - For accessibility, testing
+Health Endpoint - Check application's health/status
+API Versioning - v1, first controller version
+
+Video Link: https://www.youtube.com/watch?v=rgh_cvxVPfY
